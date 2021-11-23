@@ -22,13 +22,13 @@ def FindMedianSaturation(i, j):
     return int(medianSaturation // 100)
 
 
-def ApplyMedianSaturation(i, j, medianSaturation):
+def ApplyMedianSaturation(i, j, medianSat):
     """присваивает всем пикселям фрагмента заданную насыщенность"""
     for n in range(i, i + mosaicPartSide):
         for n1 in range(j, j + mosaicPartSide):
-            imageMatrix[n][n1][0] = int(medianSaturation // graySensitivity) * graySensitivity
-            imageMatrix[n][n1][1] = int(medianSaturation // graySensitivity) * graySensitivity
-            imageMatrix[n][n1][2] = int(medianSaturation // graySensitivity) * graySensitivity
+            imageMatrix[n][n1][0] = int(medianSat // graySens) * graySens
+            imageMatrix[n][n1][1] = int(medianSat // graySens) * graySens
+            imageMatrix[n][n1][2] = int(medianSat // graySens) * graySens
 
 
 if __name__ == "__main__":
@@ -41,7 +41,7 @@ imgadreses = input().split(' ')
 img = Image.open(imgadreses[0])
 imageMatrix = np.array(img)
 mosaicPartSide = 5
-graySensitivity = 10
+graySens = 10
 height = len(imageMatrix)
 width = len(imageMatrix[1])
 for i in range(0, height - 1, mosaicPartSide):
@@ -52,3 +52,4 @@ res = Image.fromarray(imageMatrix)
 res.save(imgadreses[1])
 
 print('pilik pilik')
+
