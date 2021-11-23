@@ -13,3 +13,6 @@
 ![resOld.jpg](resOld.jpg)
 Изображение, полученное фильтром без ввода:
 ![resWithName.jpg](resWithName.jpg)
+
+Функция проходит созданные док-тесты
+![img_3.png](img_3.png)
