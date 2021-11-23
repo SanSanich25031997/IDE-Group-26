@@ -31,6 +31,6 @@ for i in range(0, height - 1, mosaicPartSide):
         medianSaturation = FindMedianSaturation(i, j, mosaicPartSide, imageMatrix)
         ApplyMedianSaturation(i, j, mosaicPartSide, medianSaturation, graySensitivity, imageMatrix)
 res = Image.fromarray(imageMatrix)
-res.save('res.jpg')
+res.save('resWithName.jpg')
 
 print('pilik pilik')
