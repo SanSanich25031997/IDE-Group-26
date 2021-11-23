@@ -25,5 +25,5 @@ while i < a - 11:
                 arr[n][y][2] = int(s // 50) * 50
         j = j + 10
     i = i + 10
-res = Image.fromarray(arr)
+res = Image.fromarray(arr.astype(np.uint8))
 res.save('Cyber_old.res.jpg')
