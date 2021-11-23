@@ -1,6 +1,6 @@
 from PIL import Image
 import numpy as np
-img = Image.open("scale1200.jpg")
+img = Image.open("ahmed_epic.jpg")
 arr = np.array(img)
 a = len(arr)
 a1 = len(arr[1])
