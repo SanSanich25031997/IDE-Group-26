@@ -3,7 +3,6 @@ import numpy as np
 
 
 def convert_image_to_mosaic(image, size, gradation_step):
-    """Ковертируем изображение в мозаику"""
     for x in range(0, len(image), size):
         for y in range(0, len(image[0]), size):
             image[x:x + size, y:y + size] = get_average_brightness(
@@ -18,7 +17,10 @@ def get_average_brightness(block, size, gradation_step):
 
 
 def main():
-    """Получаем данные (имя файла, размер блока, значение градаций серого и имя итогового файла)"""
+    """Получаем данные (имя файла, размер блока, значение градаций серого и имя итогового файла)
+
+    >>> get_average_brightness(image, block_size, gradation_step)
+    153"""
     image_file = Image.open(input("Введите имя файла, которое хотите конвертировать: "))
     block_size = int(input("Введите размер блока: "))
     gradations_count = int(input("Введите количество градаций серого: "))
@@ -30,4 +32,7 @@ def main():
 
 
 if __name__ == '__main__':
+    import filter_with_doctests
+    filter_with_doctests.testmod()
+
     main()

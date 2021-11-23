@@ -23,6 +23,7 @@ def main():
     gradation_step = 255 // gradations_count
 
     res = Image.fromarray(convert_image_to_mosaic(image, block_size, gradation_step))
+    print(get_average_brightness(image, block_size, gradation_step))
     res.save("Cyber_res_with_filename.jpg")
 
 
