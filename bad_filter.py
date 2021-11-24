@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
-img = Image.open("scale1200.jpg")
+
+img = Image.open("gta.jpg")
 arr = np.array(img)
 a = len(arr)
 a1 = len(arr[1])
@@ -25,4 +26,4 @@ while i < a - 11:
         j = j + 10
     i = i + 10
 res = Image.fromarray(arr)
-res.save('res.jpg')
+res.save('result_old.jpg')
