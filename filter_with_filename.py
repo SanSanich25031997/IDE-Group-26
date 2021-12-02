@@ -16,14 +16,14 @@ def get_average_brightness(block, size, gradation_step):
 
 
 def main():
-    image_file = Image.open("scale1200.jpg")
-    block_size = 10
-    gradations_count = 50
+    image_file = Image.open('test_image.jpg')
+    block_size = 2
+    gradations_count = 80
     image = np.array(image_file)
     gradation_step = 255 // gradations_count
 
     res = Image.fromarray(convert_image_to_mosaic(image, block_size, gradation_step))
-    res.save("res_new.jpg")
+    res.save('res.jpg')
 
 
 if __name__ == '__main__':
