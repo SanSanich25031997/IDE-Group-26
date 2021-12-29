@@ -1,21 +1,21 @@
 from PIL import Image
 import numpy as np
 
-name = 'frogArt.jpg'
+name = input("Введите имя файла, которое хотите конвертировать: ")
 img = Image.open(name)
 arr = np.array(img)
 lengthOfImg = len(arr)
 WidthOfImg = len(arr[1])
-areaSize = 10
-stepSize = 50
+areaSize = 2
+stepSize = 5
 
 
 def findAvgColor(i, j, areaSize):
     """
-        Находит средний цвет в который будет окрашивать определнную область.
+    Находит средний цвет в который будет окрашивать определнную область.
 
-        :param i: int, j:int, areaSize:int
-        :return: int
+    :param i: int, j:int, areaSize:int
+    :return: int
     """
     avgColor = 0
     for areaX in range(i, i + areaSize):
